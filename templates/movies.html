@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+<h1 class="text-center mb-5">
+All Movies
+</h1>
+
+<div class="row">
+{% for movie in movies %}
+
+<div class="col-md-4 mb-4">
+<div class="card h-100 shadow">
+
+<img src="{{ movie.image }}"
+class="card-img-top"
+style="height:500px;object-fit:cover;">
+
+<div class="card-body">
+
+<h4>{{ movie.name }}</h4>
+<p><b>Genre:</b> {{ movie.genre }}</p>
+<p><b>Year:</b> {{ movie.year }}</p>
+<p> {{ movie.rating }}</p>
+
+<div class="d-flex gap-2 align-items-center mt-3">
+    <a href="/movie/{{ movie.id }}" class="btn btn-dark rounded-pill px-3">View Details</a>
+    <a href="/edit_movie/{{ movie.id }}" class="btn btn-warning rounded-pill px-3">Edit</a>
+    <a href="/delete_movie/{{ movie.id }}" class="btn btn-danger rounded-pill px-3" onclick="return confirm('Are you sure?');">Delete</a>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+{% endfor %}
+
+</div>
+</div>
+
+{% endblock %}

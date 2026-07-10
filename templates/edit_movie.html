@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+<h1>Edit Movie</h1>
+
+<form method="POST">
+
+<input name="name" value="{{ movie.name }}" class="form-control mb-2">
+<input name="genre" value="{{ movie.genre }}" class="form-control mb-2">
+<input name="year" value="{{ movie.year }}" class="form-control mb-2">
+<input name="rating" value="{{ movie.rating }}" class="form-control mb-2">
+<input name="duration" value="{{ movie.duration }}" class="form-control mb-2">
+<input name="image" value="{{ movie.image }}" class="form-control mb-2">
+<textarea name="description" class="form-control mb-2">{{ movie.description }}</textarea>
+
+<button class="btn btn-primary">
+Update
+</button>
+
+</form>
+</div>
+
+{% endblock %}

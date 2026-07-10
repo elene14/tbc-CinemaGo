@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    
+<h1>Add Movie (Admin)</h1>
+
+<form method="POST">
+
+<input name="name" class="form-control mb-2" placeholder="Movie Name">
+<input name="genre" class="form-control mb-2" placeholder="Genre">
+<input name="year" class="form-control mb-2" placeholder="Year">
+<input name="rating" class="form-control mb-2" placeholder="Rating">
+<input name="duration" class="form-control mb-2" placeholder="Duration">
+<input name="image" class="form-control mb-2" placeholder="Image URL">
+
+<textarea name="description" class="form-control mb-2" placeholder="Description"></textarea>
+
+<button class="btn btn-success">
+Add Movie
+</button>
+
+</form>
+</div>
+
+{% endblock %}
